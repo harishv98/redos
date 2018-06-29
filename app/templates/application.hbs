@@ -1,5 +1,13 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<nav class="navbar navbar-default navbar-expand-sm bg-light justify-content-center">
+<div class="container-fluid">
+<ul class="nav navbar-nav">
+ <li>{{#link-to 'dashboard'}}Dashboard{{/link-to}}</li>
+<li>{{#link-to 'cards'}}Cards{{/link-to}}</li>
+<li>{{#link-to 'relations'}}Relations{{/link-to}}</li>
+</ul>
+</div>
+</nav>
+<br>
 {{outlet}}

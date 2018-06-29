@@ -7,6 +7,14 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('viewdash');
+  this.route('viewcards');
+  this.route('editdash',{path:'/editdash/:dashbd_id'});
+  this.route('editcard',{path:'/editcard/:card_id'});
+  this.route('cards');
+  this.route('dashboard');
+  this.route('relations');
+  this.route('select');
 });
 
 export default Router;

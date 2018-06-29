@@ -1,0 +1,24 @@
+<div class="container">
+<div class="row">
+{{#each model as |card|}}
+<div class="col-sm-4">
+<div class="card" style="width: 20rem;">
+<div class="panel panel-default">
+<div class="container">
+<h1><label>{{card.name}}</label><br></h1>
+<h5>
+<label>ID:</label>{{card.id}}<br>
+<label>minHeight:</label>{{card.minheight}}<br>
+<label>maxHeight:</label>{{card.maxheight}}<br>
+<label>minwidth:</label>{{card.minwidth}}<br>
+<label>maxwidth:</label>{{card.maxwidth}}<br></h5>
+<button class="btn btn-danger btn-lg"{{action 'delete' card.id}}>Delete</button>
+<button class="btn btn-basic btn-lg">{{#link-to 'editcard' card.id}}Edit{{/link-to}}</button>
+</div>
+</div>
+</div>
+</div>
+{{/each}}
+</div>
+</div>
+{{outlet}}

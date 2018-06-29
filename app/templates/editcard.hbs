@@ -1,0 +1,10 @@
+<br>
+<div class="well well-lg">
+<label class="control-label col-sm-2">Name:   </label>{{input class="w3-input w3-animate-input" value=model.name}}<br>
+<label class="control-label col-sm-2">MinHeight:</label>{{input class="w3-input w3-animate-input" value=model.minheight}}<br>
+<label class="control-label col-sm-2">MaxHeight:</label>{{input class="w3-input w3-animate-input" value=model.maxheight}}<br>
+<label class="control-label col-sm-2">Minwidth:</label>{{input class="w3-input w3-animate-input" value=model.minwidth}}<br>
+<label class="control-label col-sm-2">Maxwidth:</label>{{input class="w3-input w3-animate-input" value=model.maxwidth}}<br>
+<button type='button'class="btn btn-primary btn-lg"{{action 'editField' model.id}}>Edit</button>
+</div>
+{{outlet}}

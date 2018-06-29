@@ -1,0 +1,20 @@
+<div class="container">
+<div class="row">
+{{#each model as |dash|}}<br>
+<div class="col-sm-4">
+<div class="card" style="width: 20rem;">
+<div class="panel panel-default">
+<div class="container">
+<h1><label>{{dash.name}}</label></h1><br>
+<h5>
+<label>ID:</label>{{dash.id}}<br>
+<button class="btn btn-danger btn-lg"{{action 'deletedash' dash.id}}>Delete</button>
+<button class="btn btn-basic btn-lg">{{#link-to 'editdash' dash.id}}Edit{{/link-to}}</button></h5>
+</div>
+</div>
+</div>
+</div>
+{{/each}}
+</div>
+</div>
+{{outlet}}

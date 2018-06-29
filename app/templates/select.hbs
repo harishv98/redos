@@ -1,0 +1,5 @@
+{{#each model as |car|}}
+{{car.name}}
+<button {{action 'addCard' car.id}}>Add Card</button>
+{{/each}}
+{{outlet}}

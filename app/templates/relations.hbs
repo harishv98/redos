@@ -1,0 +1,27 @@
+<div class="container">
+<div class="row">
+{{#each model as |dash|}}
+<div class="col-sm-6">
+<div class="card">
+<div class="panel panel-default">
+<div class="jumbotron"><h1><label>{{dash.name}}</label><br></h1></div>
+<div class="container">
+<h4>CARDS:</h4><br>
+<div class="row">
+{{#each dash.card_ids as |vals|}}
+<div class="col-sm-8">
+<h3>{{vals.name}}</h3>
+<button class="btn btn-danger"{{action 'deletecard' vals.id}}>Delete</button><br>
+</div>
+{{/each}}
+</div>
+<br>
+<label><button class="btn btn-basic btn-lg"{{action 'inject' dash.id}}><h3>Add Cards</h3></button></label>
+</div>
+</div>
+</div>
+</div>
+{{/each}}
+</div>
+</div>
+{{outlet}}
